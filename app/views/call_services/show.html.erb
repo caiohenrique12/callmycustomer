@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Id customer:</strong>
+  <%= @call_service.id_customer %>
+</p>
+
+<p>
+  <strong>Id service:</strong>
+  <%= @call_service.id_service %>
+</p>
+
+<p>
+  <strong>Id component:</strong>
+  <%= @call_service.id_component %>
+</p>
+
+<p>
+  <strong>Details:</strong>
+  <%= @call_service.details %>
+</p>
+
+<%= link_to 'Edit', edit_call_service_path(@call_service) %> |
+<%= link_to 'Back', call_services_path %>

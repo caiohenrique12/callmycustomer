@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Id call:</strong>
+  <%= @call_finish.id_call %>
+</p>
+
+<p>
+  <strong>Id user:</strong>
+  <%= @call_finish.id_user %>
+</p>
+
+<p>
+  <strong>Observation:</strong>
+  <%= @call_finish.observation %>
+</p>
+
+<p>
+  <strong>Active:</strong>
+  <%= @call_finish.active %>
+</p>
+
+<%= link_to 'Edit', edit_call_finish_path(@call_finish) %> |
+<%= link_to 'Back', call_finishes_path %>

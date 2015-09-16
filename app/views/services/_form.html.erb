@@ -1,21 +1,18 @@
-<%= form_for(@service) do |f| %>
-  <% if @service.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@service.errors.count, "error") %> prohibited this service from being saved:</h2>
+<% if @services.errors.any? %>
+  <div id="error_explanation">
+    Há erros no formulário, por favor verifique.
+  </div>
+<% end %>
 
-      <ul>
-      <% @service.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
+<%= form_for(@service) do |f| %>
 
   <div class="field">
     <%= f.label :name %><br>
     <%= f.text_field :name %>
+    <%= error_tag @services, :name %>
   </div>
   <div class="actions">
     <%= f.submit %>
   </div>
+
 <% end %>

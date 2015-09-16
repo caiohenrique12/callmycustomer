@@ -1,33 +1,32 @@
-<%= form_for(@call_service) do |f| %>
-  <% if @call_service.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@call_service.errors.count, "error") %> prohibited this call_service from being saved:</h2>
+<% if @call_service.errors.any? %>
+  <div id="error_explanation">
+    Há erros no formulário, por favor verifique.
+  </div>
+<% end %>
 
-      <ul>
-      <% @call_service.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
+<%= form_for(@call_service) do |f| %>
 
   <div class="field">
     <%= f.label :id_customer %><br>
     <%= f.number_field :id_customer %>
+    <%= error_tag @call_service, :id_customer %>
   </div>
   <div class="field">
     <%= f.label :id_service %><br>
     <%= f.number_field :id_service %>
+    <%= error_tag @call_service, :id_service %>
   </div>
   <div class="field">
     <%= f.label :id_component %><br>
-    <%= f.number_field :id_component %>
+    <%= error_tag @call_service, :id_component %>
   </div>
   <div class="field">
     <%= f.label :details %><br>
     <%= f.text_area :details %>
+    <%= error_tag @call_service, :details %>
   </div>
   <div class="actions">
     <%= f.submit %>
   </div>
+  
 <% end %>

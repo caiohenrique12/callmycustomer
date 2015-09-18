@@ -205,16 +205,70 @@ pt-BR:
       long: "%d de %B de %Y, %H:%M"
       short: "%d de %B, %H:%M"
     pm: ''
+  call_finishs:
+    new:
+      
+    show:
+      
+    links:
+      edit: Editar 
+      back: Voltar
+  call_services:
+    new:
+      title: Criar Chamado
+    edit:
+      title: Editar Chamado
+    show:
+      id_customer: "Cliente: %{id_customer}"
+      id_service: "Serviço: %{id_service}"
+      id_component: "Componente: %{id_component}"
+      details: "Detalhes: %{details}"
+    links:
+      edit: Editar 
+      back: Voltar
+  components:
+    new:
+      title: Criar Componente
+    edit:
+      title: Editar Componente
+    show:
+    links:
+      edit: Editar 
+      back: Voltar
+  customers:
+    new:
+    edit:
+      title: Editar Conta
+    show:
+      address: "Endereço: %{address}"
+      phone1: "Telefone Fixo: %{phone1}"
+      phone2: "Telefone Celular: %{phone2}"
+      age: "Idade: %{age}"
+      sex: "Sexo: %{sex}"
+    links:
+      edit: Editar 
+      back: Voltar
+  services:
+    new: 
+      title: Cadastrar Serviço
+    edit: 
+      title: Editar Serviço
+    show:
+    links:
+      edit: Editar
+      back: Voltar
   users:
     new:
-      title: Cadastro
+      title: Criar Conta
     edit: 
       title: Editar Perfil
     show:
       title: "Perfil: %{user_name}"
     links:  
-      edit: Editar Perfil
+      edit: Editar
       back: Voltar
+  general:
+        form_error: Há erros no formulário, por favor verifique.
   activerecord:
     models:
       call_finish: Finalizar chamado

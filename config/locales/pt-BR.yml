@@ -269,15 +269,6 @@ pt-BR:
       back: Voltar
   general:
         form_error: Há erros no formulário, por favor verifique.
-  signup:
-    confirm_email:
-      subject: 'Callmycustomer - Confirmação de email' 
-      title: 'Seja bem vindo(a) ao Callmycustomer!'
-      body: Seja bem vindo(a) ao Callmycustomer, %{nome}. 
-            O Callmycustomer é o seu sistema de chamados 
-            de codigo aberto feito em ruby on rails.
-      confirm_link_html: 'Para confirmar sua conta, acesse: %{link}'
-      thanks_html: 'Obrigado por se cadastrar no %{link}'
   activerecord:
     models:
       call_finish: Finalizar chamado
@@ -313,3 +304,14 @@ pt-BR:
         email: Email
         password: Senha
         password_confirmation: Confirme sua senha
+  signup:
+    confirm_email:
+      subject: 'Callmycustomer - Confirmação de email' 
+      title: 'Seja bem vindo(a) ao Callmycustomer!'
+      body: | 
+          Seja bem vindo(a) ao Callmycustomer, %{nome}. 
+          O Callmycustomer é o seu sistema de chamados 
+          de codigo aberto feito em ruby on rails.
+          
+      confirm_link_html: 'Para confirmar sua conta, acesse: %{link}'
+      thanks_html: 'Obrigado por se cadastrar no %{link}'

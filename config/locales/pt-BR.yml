@@ -315,3 +315,5 @@ pt-BR:
           
       confirm_link_html: 'Para confirmar sua conta, acesse: %{link}'
       thanks_html: 'Obrigado por se cadastrar no %{link}'
+  confirmations:
+    success: Email confirmado com sucesso, obrigado!

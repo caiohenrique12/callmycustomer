@@ -8,6 +8,24 @@ li {
 	list-style: none;
 }
 
+.navbar-default {
+	background-color: rgb(38, 50, 56) !important;
+}
+
+.navbar-default .navbar-brand {
+	color: white;
+}
+
+.navbar-default .navbar-nav > li > a {
+	color: white;	
+}
+
+.nav > li > a:focus, .nav > li > a:hover {
+	text-decoration: none;
+	background-color: #00BCD4;
+	color: rgb(55, 71, 79);
+}
+
 .sidebar {
 	position: fixed;
 	top: 51px;
@@ -18,8 +36,12 @@ li {
 	padding: 20px;
 	overflow-x: hidden;
 	overflow-y: auto;
-	background-color: black;
+	background-color: rgb(55, 71, 79) !important;
 	border-right: 1px solid #EEE;	
+}
+
+.sidebar a {
+	color: rgba(255, 255, 255, 0.56);
 }
 
 @media (min-width: 768px)

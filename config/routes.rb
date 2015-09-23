@@ -12,7 +12,7 @@ Rails.application.routes.draw do
   resource :confirmation, only: [:show]
   resource :user_sessions, only: [:create, :new, :destroy]
 
-  root 'call_services#index'
+  root 'home#index'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

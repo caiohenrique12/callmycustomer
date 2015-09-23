@@ -10,6 +10,8 @@ Rails.application.routes.draw do
 
   # You can have the root of your site routed with "root"
   resource :confirmation, only: [:show]
+  resource :user_sessions, only: [:create, :new, :destroy]
+
   root 'call_services#index'
 
   # Example of regular route:

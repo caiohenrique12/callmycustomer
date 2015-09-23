@@ -2,19 +2,20 @@
 
 <h1>Listing Call Finishes</h1>
 
-<table>
-  <thead>
-    <tr>
-      <th>Id call</th>
-      <th>Id user</th>
-      <th>Observation</th>
-      <th>Active</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
+<div class="table-responsive">
+  <table class="table table-bordered">
+    <thead>
+      <tr>
+        <th>Id call</th>
+        <th>Id user</th>
+        <th>Observation</th>
+        <th>Active</th>
+        <th colspan="3"></th>
+      </tr>
+    </thead>
 
-  <tbody>
-    <% @call_finishes.each do |call_finish| %>
+    <tbody>
+      <% @call_finishes.each do |call_finish| %>
       <tr>
         <td><%= call_finish.id_call %></td>
         <td><%= call_finish.id_user %></td>
@@ -24,10 +25,10 @@
         <td><%= link_to 'Edit', edit_call_finish_path(call_finish) %></td>
         <td><%= link_to 'Destroy', call_finish, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
-    <% end %>
-  </tbody>
-</table>
-
+      <% end %>
+    </tbody>
+  </table>
+</div>
 <br>
 
 <%= link_to 'New Call finish', new_call_finish_path %>

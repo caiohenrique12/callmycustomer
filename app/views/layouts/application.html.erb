@@ -1,14 +1,83 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Callmycustomer</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <%= csrf_meta_tags %>
+	<title>Callmycustomer</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+	<%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+	<%= csrf_meta_tags %>
 </head>
 <body>
+	<nav class="navbar navbar-default">
+		<div class="container-fluid">
+			<!-- Callmycustomer and toggle get grouped for better mobile display -->
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="#">CallMyCustomer</a>
+			</div>
 
-<%= yield %>
+			<!-- Collect the nav links, forms, and other content for toggling -->
+			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+				<ul class="nav navbar-nav navbar-right">
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Minha Conta <span class="caret"></span></a>
+						<ul class="dropdown-menu">
+							<li><a href="#">Entrar</a></li>
+							<li role="separator" class="divider"></li>
+							<li><a href="#">Criar Conta</a></li>
+						</ul>
+					</li>
+				</ul>
+			</div><!-- /.navbar-collapse -->
+		</div><!-- /.container-fluid -->
+	</nav>
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-sm-3 col-md-2 sidebar">
+				<nav>
+					<ul class="nav nav-pills nav-stacked">
+						<li><%= link_to 'Home', root_path %></li>
+						<li><%= link_to 'Usuários', users_path %></li>
+						<li><%= link_to 'Abrir Chamado', new_call_service_path %></li>
+						<li><%= link_to 'Fechar Chamado', new_call_finish_path %></li>
+					</ul>
+				</nav>
+			</div>
+			<div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+				<div class="col-md-4">
+					<div class="panel panel-default panel-one">
+						<div class="panel-body">
+							<p class="text-center size-title-panel">Chamado em aberto</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="panel panel-default panel-two">
+						<div class="panel-body">
+							<p class="text-center size-title-panel">Chamado em aprovação</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="panel panel-default panel-three">
+						<div class="panel-body">
+							<p class="text-center size-title-panel">Chamado finalizado</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+				<div class="col-md-12">
+					<%= yield %>
+				</div>
+			</div>
+		</div>
+	</div>
 
 </body>
 </html>

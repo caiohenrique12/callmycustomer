@@ -1,20 +1,21 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Listing Call Services</h1>
+<h2>Listing Call Services</h2>
 
-<table>
-  <thead>
-    <tr>
-      <th>Id customer</th>
-      <th>Id service</th>
-      <th>Id component</th>
-      <th>Details</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
+<div class="table-responsive">
+  <table class="table table-bordered">
+    <thead>
+      <tr>
+        <th>Id customer</th>
+        <th>Id service</th>
+        <th>Id component</th>
+        <th>Details</th>
+        <th colspan="3"></th>
+      </tr>
+    </thead>
 
-  <tbody>
-    <% @call_services.each do |call_service| %>
+    <tbody>
+      <% @call_services.each do |call_service| %>
       <tr>
         <td><%= call_service.id_customer %></td>
         <td><%= call_service.id_service %></td>
@@ -24,10 +25,10 @@
         <td><%= link_to 'Edit', edit_call_service_path(call_service) %></td>
         <td><%= link_to 'Destroy', call_service, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
-    <% end %>
-  </tbody>
-</table>
-
+      <% end %>
+    </tbody>
+  </table>
+</div>
 <br>
 
-<%= link_to 'New Call service', new_call_service_path %>
+<%= link_to 'New Call service', new_call_service_path, class: 'btn btn-info' %>

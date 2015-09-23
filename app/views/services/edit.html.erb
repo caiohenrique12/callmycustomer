@@ -1,6 +1,12 @@
-<h1><%= t '.title' %></h1>
+<ol class="breadcrumb bc-3">
+  <li><%= link_to 'Home', root_path %></li>
+  <li><%= link_to 'Lista de Serviços', root_path %></li>
+  <li class="active"><b>Editar Serviço</b></li>
+</ol>
+
+<h2><%= t '.title' %></h2>
 
 <%= render 'form' %>
 
-<%= link_to 'Show', @service %> |
-<%= link_to t('links.back'), services_path %>
+<!--<%= link_to 'Show', @service %> |
+<%= link_to t('links.back'), services_path %>-->

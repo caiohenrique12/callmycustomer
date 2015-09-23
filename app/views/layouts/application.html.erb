@@ -29,7 +29,7 @@
 						<ul class="dropdown-menu">
 							<li><a href="#">Entrar</a></li>
 							<li role="separator" class="divider"></li>
-							<li><a href="#">Criar Conta</a></li>
+							<li><%= link_to 'Criar Conta', new_customer_path %></li>
 						</ul>
 					</li>
 				</ul>
@@ -43,6 +43,8 @@
 					<ul class="nav nav-pills nav-stacked">
 						<li><%= link_to 'Home', root_path %></li>
 						<li><%= link_to 'Usuários', users_path %></li>
+						<li><%= link_to 'Serviços', services_path %></li>
+						<li><%= link_to 'Componentes', components_path %></li>
 						<li><%= link_to 'Abrir Chamado', new_call_service_path %></li>
 						<li><%= link_to 'Fechar Chamado', new_call_finish_path %></li>
 					</ul>

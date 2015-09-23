@@ -10,7 +10,7 @@
         <th>Id service</th>
         <th>Id component</th>
         <th>Details</th>
-        <th colspan="3"></th>
+        <th>Ação</th>
       </tr>
     </thead>
 
@@ -21,9 +21,11 @@
         <td><%= call_service.id_service %></td>
         <td><%= call_service.id_component %></td>
         <td><%= call_service.details %></td>
-        <td><%= link_to 'Show', call_service %></td>
-        <td><%= link_to 'Edit', edit_call_service_path(call_service) %></td>
-        <td><%= link_to 'Destroy', call_service, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td>
+            <%= link_to 'Show', call_service %>
+            <%= link_to 'Edit', edit_call_service_path(call_service) %>
+            <%= link_to 'Destroy', call_service, method: :delete, data: { confirm: 'Are you sure?' } %>
+        </td>
       </tr>
       <% end %>
     </tbody>

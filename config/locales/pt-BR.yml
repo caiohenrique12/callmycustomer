@@ -218,6 +218,8 @@ pt-BR:
       title: Criar Chamado
     edit:
       title: Editar Chamado
+    index:
+      title: Chamados em Aberto
     show:
       id_customer: "Cliente: %{id_customer}"
       id_service: "Serviço: %{id_service}"
@@ -231,12 +233,14 @@ pt-BR:
       title: Criar Componente
     edit:
       title: Editar Componente
-    show:
+    index: 
+      title: Lista de Componentes
     links:
       edit: Editar 
       back: Voltar
   customers:
     new:
+      title: Criar Conta
     edit:
       title: Editar Conta
     show:
@@ -253,6 +257,8 @@ pt-BR:
       title: Cadastrar Serviço
     edit: 
       title: Editar Serviço
+    index:
+      title: Lista de Serviços
     show:
     links:
       edit: Editar

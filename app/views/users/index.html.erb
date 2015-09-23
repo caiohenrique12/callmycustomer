@@ -1,29 +1,24 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Listing Users</h1>
+<ol class="breadcrumb bc-3">
+  <li><%= link_to 'Home', root_path %></li>
+  <li class="active"><b>Criar Chamado</b></li>
+</ol>
 
-<table>
-  <thead>
-    <tr>
-      <th>Nome</th>
-      <th>Password</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
+<h2>Listing Users</h2>
 
-  <tbody>
-    <% @users.each do |user| %>
-      <tr>
-        <td><%= user.nome %></td>
-        <td><%= user.password %></td>
-        <td><%= link_to 'Show', user %></td>
-        <td><%= link_to 'Edit', edit_user_path(user) %></td>
-        <td><%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+<% @users.each do |user| %>
+<div class="panel panel-default">
+  <div class="panel-body">
+    <h4><%= user.nome %></h4>
+    <p class="list-group-item-text"><%= user.email %></p>
+  <div class="form-group">
+    <!--<%= link_to 'Show', user, class: 'btn btn-warning' %>-->
+    <%= link_to 'Edit', edit_user_path(user), class: 'btn btn-primary' %>
+    <%= link_to 'Destroy', user, class: 'btn btn-danger', method: :delete, data: { confirm: 'Are you sure?' } %>
+  </div>
+  </div>
+</div>
+<% end %>
 
-<br>
-
-<%= link_to 'New User', new_user_path %>
+<%= link_to 'New User', new_user_path, class: 'btn btn-info' %>

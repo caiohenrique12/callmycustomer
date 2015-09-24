@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :situations
   resources :call_finishes
   resources :call_services
   resources :services

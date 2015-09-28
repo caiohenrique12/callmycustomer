@@ -1,21 +1,26 @@
-<%= form_for(@situation) do |f| %>
-  <% if @situation.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@situation.errors.count, "error") %> prohibited this situation from being saved:</h2>
-
-      <ul>
-      <% @situation.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
-
-  <div class="field">
-    <%= f.label :name %><br>
-    <%= f.text_field :name %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
+<% if @situation.errors.any? %>
+<div id="error_explanation">
+  <%= t 'general.form_error'%>
+</div>
 <% end %>
+
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <p class="panel-title">Todos os campos são obrigatórios</p>
+  </div>
+  <div class="panel-body">
+
+    <%= form_for(@situation) do |f| %>
+      <div class="form-group">
+        <%= f.label :name, class: 'control-label' %>
+        <%= f.text_field :name, class: 'form-control' %>
+        <%= error_tag @situation, :name %>
+      </div>
+      <div class="form-group">
+        <%= f.submit %>
+        <%= link_to 'Back', situations_path, class: 'btn btn-default' %>
+      </div>
+    <% end %>
+
+  </div>
+</div>

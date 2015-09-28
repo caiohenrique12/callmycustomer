@@ -263,6 +263,13 @@ pt-BR:
     links:
       edit: Editar
       back: Voltar
+  situations:
+    new:
+      title: Cadastrar Situação
+    edit:
+      title: Editar Situação
+    index:
+      title: Lista de Situações
   users:
     new:
       title: Criar Conta

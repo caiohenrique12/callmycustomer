@@ -1,6 +1,12 @@
-<h1>Editing Situation</h1>
+<ol class="breadcrumb bc-3">
+  <li><%= link_to 'Home', root_path %></li>
+  <li><%= link_to 'Lista de Situações', situations_path %></li>
+  <li class="active"><b>Editar Situação</b></li>
+</ol>
+
+<h2><%= t '.title' %></h2>
 
 <%= render 'form' %>
 
-<%= link_to 'Show', @situation %> |
-<%= link_to 'Back', situations_path %>
+<!--<%= link_to 'Show', @situation %> |
+<%= link_to 'Back', situations_path %>-->

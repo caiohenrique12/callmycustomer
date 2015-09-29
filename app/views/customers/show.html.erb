@@ -1,0 +1,28 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <%= @customer.name %>
+</p>
+
+<p>
+  <%= t '.address', address: @customer.address %>
+</p>
+
+<p>
+  <%= t '.phone1', phone1: @customer.phone1 %>
+</p>
+
+<p>
+  <%= t '.phone2', phone2: @customer.phone2 %>
+</p>
+
+<p>
+  <%= t '.age', age: @customer.age %>
+</p>
+
+<p>
+  <%= t '.sex', sex: @customer.sex %>
+</p>
+
+<%= link_to 'Edit', edit_customer_path(@customer) %> |
+<%= link_to 'Back', customers_path %>

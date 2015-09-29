@@ -1,0 +1,101 @@
+* {
+	margin: 0;
+	padding: 0;
+	text-decoration: none;
+}
+
+li {
+	list-style: none;
+}
+
+.navbar-default {
+	background-color: rgb(38, 50, 56) !important;
+}
+
+.navbar-default .navbar-brand {
+	color: white;
+}
+
+.navbar-default .navbar-nav > li > a {
+	color: white;	
+}
+
+.nav > li > a:focus, .nav > li > a:hover {
+	text-decoration: none;
+	background-color: #00BCD4;
+	color: rgb(55, 71, 79);
+}
+
+.sidebar {
+	position: fixed;
+	top: 51px;
+	bottom: 0px;
+	left: 0px;
+	z-index: 1000;
+	display: block;
+	padding: 20px;
+	overflow-x: hidden;
+	overflow-y: auto;
+	background-color: rgb(55, 71, 79) !important;
+	border-right: 1px solid #EEE;	
+}
+
+.sidebar a {
+	color: rgba(255, 255, 255, 0.56);
+}
+
+@media (min-width: 768px)
+.main {
+	padding-right: 40px;
+    padding-left: 40px;
+}
+
+.panel-heading{
+	padding: 0px;
+}
+
+.panel-title {
+	margin: 10px 15px;
+}
+
+.panel-default > .panel-heading {
+	color: #333;
+	border-color: #DDD;
+	background-color: white;
+}
+.panel-one {
+	background-color: #BA79CB;
+	color: white;
+}
+
+.panel-two {
+	background-color: #F4543C;
+	color: white;
+}
+
+.panel-three {
+	background-color: #00A65A;
+	color: white;
+}
+
+.size-title-panel {
+	font-size: 20px;
+	font-weight: 900;
+}
+
+.control-label {
+	display: inline-block;
+	max-width: 100%;
+	margin-bottom: 5px;
+	font-weight: 200;
+}
+
+.bc-3 {
+	padding-left: 0;
+	padding-right: 0;
+	background-color: transparent;
+}
+
+.breadcrumb > li a {
+	color: #737881;
+}

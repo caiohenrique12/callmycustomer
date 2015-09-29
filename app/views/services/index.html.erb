@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<ol class="breadcrumb bc-3">
+  <li><%= link_to 'Home', root_path %></li>
+  <li class="active"><b>Lista de Serviços</b></li>
+</ol>
+
+<h2><%= t '.title' %></h2>
+
+<div class="table-responsive">
+  <table class="table table-bordered">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Ação</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <% @services.each do |service| %>
+      <tr>
+        <td><%= service.name %></td>
+        <td>
+          <%= link_to 'Edit', edit_service_path(service), class: 'btn btn-success' %>
+          <%= link_to 'Destroy', service, class: 'btn btn-danger', method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>
+<br>
+
+<%= link_to 'New Service', new_service_path, class: 'btn btn-info' %>

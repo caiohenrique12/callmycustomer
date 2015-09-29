@@ -1,0 +1,38 @@
+<% if @call_service.errors.any? %>
+<div id="error_explanation">
+  <%= t 'general.form_error'%>
+</div>
+<% end %>
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <p class="panel-title">Todos os campos são obrigatórios</p>
+  </div>
+  <div class="panel-body">
+    <%= form_for(@call_service) do |f| %>
+      <div class="form-group">
+        <%= f.label :id_customer, class: 'control-label' %>
+        <%= f.number_field :id_customer, class: 'form-control' %>
+        <%= error_tag @call_service, :id_customer %>
+      </div>
+      <div class="form-group">
+        <%= f.label :id_service, class: 'control-label' %>
+        <%= f.number_field :id_service, class: 'form-control' %>
+        <%= error_tag @call_service, :id_service %>
+      </div>
+      <div class="form-group">
+        <%= f.label :id_component, class: 'control-label' %>
+        <%= f.number_field :id_component, class: 'form-control' %>
+        <%= error_tag @call_service, :id_component %>
+      </div>
+      <div class="form-group">
+        <%= f.label :details, class: 'control-label' %>
+        <%= f.text_area :details, class: 'form-control' %>
+        <%= error_tag @call_service, :details %>
+      </div>
+      <div class="form-group">
+        <%= f.submit %>
+        <%= link_to 'Back', call_services_path, class: 'btn btn-default' %>
+      </div>
+    <% end %>
+  </div>
+</div>

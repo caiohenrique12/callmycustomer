@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<ol class="breadcrumb bc-3">
+  <li><%= link_to 'Home', root_path %></li>
+  <li class="active"><b>Criar Chamado</b></li>
+</ol>
+
+<h2><%= t '.title' %></h2>
+
+<% @users.each do |user| %>
+<div class="panel panel-default">
+  <div class="panel-body">
+    <h4><%= user.nome %></h4>
+    <p class="list-group-item-text"><%= user.email %></p>
+  <div class="form-group">
+    <!--<%= link_to 'Show', user, class: 'btn btn-warning' %>-->
+    <%= link_to 'Edit', edit_user_path(user), class: 'btn btn-primary' %>
+    <%= link_to 'Destroy', user, class: 'btn btn-danger', method: :delete, data: { confirm: 'Are you sure?' } %>
+  </div>
+  </div>
+</div>
+<% end %>
+
+<%= link_to 'New User', new_user_path, class: 'btn btn-info' %>

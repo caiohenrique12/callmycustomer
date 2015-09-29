@@ -1,0 +1,26 @@
+<% if @service.errors.any? %>
+<div id="error_explanation">
+  <%= t 'general.form_error'%>
+</div>
+<% end %>
+
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <p class="panel-title">Todos os campos são obrigatórios</p>
+  </div>
+  <div class="panel-body">
+    <%= form_for(@service) do |f| %>
+
+    <div class="form-group">
+      <%= f.label :name, class: 'control-label' %>
+      <%= f.text_field :name, class: 'form-control' %>
+      <%= error_tag @service, :name %>
+    </div>
+    <div class="form-group">
+      <%= f.submit %>
+      <%= link_to t('links.back'), services_path, class: 'btn btn-default' %>
+    </div>
+
+    <% end %>
+  </div>
+</div>

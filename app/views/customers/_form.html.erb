@@ -1,0 +1,48 @@
+<% if @customer.errors.any? %>
+<div id="error_explanation">
+  <%= t 'general.form_error'%>
+</div>
+<% end %>
+
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <p class="panel-title">Todos os campos são obrigatórios</p>
+  </div>
+  <div class="panel-body">
+    <%= form_for(@customer) do |f| %>
+      <div class="form-group">
+      <%= f.label :name, class: 'control-label' %>
+        <%= f.text_field :name, class: 'form-control' %>
+        <%= error_tag @customer, :name %>
+      </div>
+      <div class="form-group">
+      <%= f.label :address, class: 'control-label' %>
+        <%= f.text_field :address, class: 'form-control' %>
+        <%= error_tag @customer, :address %>
+      </div>
+      <div class="form-group">
+      <%= f.label :phone1, class: 'control-label' %>
+        <%= f.number_field :phone1, class: 'form-control' %>
+        <%= error_tag @customer, :phone1 %>
+      </div>
+      <div class="form-group">
+      <%= f.label :phone2, class: 'control-label' %>
+        <%= f.number_field :phone2, class: 'form-control' %>
+        <%= error_tag @customer, :phone2 %>
+      </div>
+      <div class="form-group">
+      <%= f.label :age, class: 'control-label' %>
+        <%= f.number_field :age, class: 'form-control' %>
+        <%= error_tag @customer, :age %>
+      </div>
+      <div class="form-group">
+      <%= f.label :sex, class: 'control-label' %>
+        <%= f.text_field :sex, class: 'form-control' %>
+        <%= error_tag @customer, :sex %>
+      </div>
+      <div class="form-group">
+        <%= f.submit %>
+      </div>
+    <% end %>
+  </div>
+</div>

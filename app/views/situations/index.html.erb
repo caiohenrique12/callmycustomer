@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<ol class="breadcrumb bc-3">
+  <li><%= link_to 'Home', root_path %></li>
+  <li class="active"><b>Lista de Situações</b></li>
+</ol>
+
+<h2><%= t '.title' %></h2>
+
+<div class="table-responsive">
+  <table class="table table-bordered">
+  <thead>
+    <tr>
+      <th>Nome</th>
+      <th>Ação</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @situations.each do |situation| %>
+      <tr>
+        <td><%= situation.name %></td>
+        <td>
+          <%= link_to 'Edit', edit_situation_path(situation), class: 'btn btn-success' %>
+          <%= link_to 'Destroy', situation, class: 'btn btn-danger', method: :delete, data: { confirm: 'Are you sure?' } %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+</div>
+
+<%= link_to 'New Situation', new_situation_path, class: 'btn btn-info' %>

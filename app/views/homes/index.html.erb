@@ -1,0 +1,60 @@
+<div class="col-md-10">
+	<h4>Seja bem vindo ao <i>CallMyCustomer</i></h4>
+</div>
+
+<div class="col-md-4">
+	<div class="panel panel-default panel-one">
+		<div class="panel-body">
+			<p class="text-center size-title-panel">Chamado em aberto</p>
+		</div>
+	</div>
+</div>
+<div class="col-md-4">
+	<div class="panel panel-default panel-two">
+		<div class="panel-body">
+			<p class="text-center size-title-panel">Chamado em aprovação</p>
+		</div>
+	</div>
+</div>
+<div class="col-md-4">
+	<div class="panel panel-default panel-three">
+		<div class="panel-body">
+			<p class="text-center size-title-panel">Chamado finalizado</p>
+		</div>
+	</div>
+</div>
+
+<div class="col-md-10">
+	<h4>Lista de Chamados em Aberto</h4>
+
+	<div class="table-responsive">
+	  <table class="table table-bordered">
+	    <thead>
+	      <tr>
+	        <th>Id customer</th>
+	        <th>Id service</th>
+	        <th>Id component</th>
+	        <th>Details</th>
+	        <th>Ação</th>
+	      </tr>
+	    </thead>
+
+	    <tbody>
+	      <% @call_services.each do |call_service| %>
+	      <tr>
+	        <td><%= call_service.id_customer %></td>
+	        <td><%= call_service.id_service %></td>
+	        <td><%= call_service.id_component %></td>
+	        <td><%= call_service.details %></td>
+	        <td>
+	            <%= link_to 'Show', call_service %>
+	            <%= link_to 'Edit', edit_call_service_path(call_service) %>
+	            <%= link_to 'Destroy', call_service, method: :delete, data: { confirm: 'Are you sure?' } %>
+	        </td>
+	      </tr>
+	      <% end %>
+	    </tbody>
+	  </table>
+	</div>
+
+</div>

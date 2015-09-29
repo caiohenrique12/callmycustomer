@@ -11,15 +11,15 @@
   <table class="table table-bordered">
   <thead>
     <tr>
-      <th>Nome</th>
-      <th>Ação</th>
+      <th class="title-table">Nome</th>
+      <th class="title-table">Ação</th>
     </tr>
   </thead>
 
   <tbody>
     <% @situations.each do |situation| %>
       <tr>
-        <td><%= situation.name %></td>
+        <td class="title-body"><%= situation.name %></td>
         <td>
           <%= link_to 'Edit', edit_situation_path(situation), class: 'btn btn-success' %>
           <%= link_to 'Destroy', situation, class: 'btn btn-danger', method: :delete, data: { confirm: 'Are you sure?' } %>

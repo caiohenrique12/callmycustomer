@@ -11,15 +11,15 @@
   <table class="table table-bordered">
   <thead>
     <tr>
-      <th>Name</th>
-      <th>Ação</th>
+      <th class="title-table">Name</th>
+      <th class="title-table">Ação</th>
     </tr>
   </thead>
 
   <tbody>
     <% @components.each do |component| %>
       <tr>
-        <td><%= component.name %></td>
+        <td class="title-body"><%= component.name %></td>
         <td>
           <%= link_to 'Edit', edit_component_path(component), class: 'btn btn-success' %>
           <%= link_to 'Destroy', component, class: 'btn btn-danger', method: :delete, data: { confirm: 'Are you sure?' } %>

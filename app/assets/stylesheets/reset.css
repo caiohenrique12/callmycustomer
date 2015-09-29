@@ -60,6 +60,16 @@ body {
 	color: rgba(255, 255, 255, 0.56);
 }
 
+.title-table {
+	font-weight: 200;
+	background-color: rgba(192, 192, 192, 0.17);
+	color: rgb(159, 159, 159);
+}
+
+.title-body {
+	color: rgb(159, 159, 159);
+}
+
 @media (min-width: 768px)
 .main {
 	padding-right: 40px;

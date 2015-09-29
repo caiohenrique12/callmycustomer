@@ -11,15 +11,15 @@
   <table class="table table-bordered">
     <thead>
       <tr>
-        <th>Name</th>
-        <th>Ação</th>
+        <th class="title-table">Name</th>
+        <th class="title-table">Ação</th>
       </tr>
     </thead>
 
     <tbody>
       <% @services.each do |service| %>
       <tr>
-        <td><%= service.name %></td>
+        <td class="title-body"><%= service.name %></td>
         <td>
           <%= link_to 'Edit', edit_service_path(service), class: 'btn btn-success' %>
           <%= link_to 'Destroy', service, class: 'btn btn-danger', method: :delete, data: { confirm: 'Are you sure?' } %></td>

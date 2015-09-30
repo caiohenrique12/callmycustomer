@@ -299,6 +299,7 @@ pt-BR:
       component: Componente
       customer: Cliente
       service: Serviços
+      situation: Situação
       user: Usuário
     attributes:
       call_finish:
@@ -310,6 +311,7 @@ pt-BR:
         id_customer: Cliente
         id_service: Serviço
         id_component: Componente
+        id_situation: Situação Chamado
         details: Detalhes do chamado
       component:
         name: Nome
@@ -321,6 +323,8 @@ pt-BR:
         age: Idade
         sex: Sexo
       service:
+        name: Nome
+      situation:
         name: Nome
       user:
         nome: Nome

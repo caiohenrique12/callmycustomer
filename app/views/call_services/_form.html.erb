@@ -10,19 +10,19 @@
   <div class="panel-body">
     <%= form_for(@call_service) do |f| %>
       <div class="form-group">
-        <%= f.label :id_customer, class: 'control-label' %>
-        <%= f.number_field :id_customer, class: 'form-control' %>
-        <%= error_tag @call_service, :id_customer %>
-      </div>
-      <div class="form-group">
         <%= f.label :id_service, class: 'control-label' %>
-        <%= f.number_field :id_service, class: 'form-control' %>
+        <%= f.select :id_service, Service.all.collect{|c| [c.name, c.id]}, prompt: 'Selecione', class: 'form-control' %>
         <%= error_tag @call_service, :id_service %>
       </div>
       <div class="form-group">
         <%= f.label :id_component, class: 'control-label' %>
-        <%= f.number_field :id_component, class: 'form-control' %>
+        <%= f.select :id_component, Component.all.collect{|c| [c.name, c.id]}, prompt: 'Selecione', class: 'form-control' %>
         <%= error_tag @call_service, :id_component %>
+      </div>
+      <div class="form-group">
+        <%= f.label :id_situation, class: 'control-label' %>
+        <%= f.select :id_situation, Situation.all.collect{|c| [c.name, c.id]}, prompt: 'Selecione', class: 'form-control' %>
+        <%= error_tag @call_service, :id_situation %>
       </div>
       <div class="form-group">
         <%= f.label :details, class: 'control-label' %>

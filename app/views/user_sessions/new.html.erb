@@ -1,29 +1,32 @@
-<h2><%= t '.title' %></h2>
+<div class="container">
+	<% if @user_session.errors.any? %>
+		<div id="error_explanation">
+		  <%= t 'general.form_error'%>
+		</div>
+	<% end %>
+	<%= form_for @user_session do |f| %>
+		<div class="panel panel-default">
+			<div class="panel-heading">
+				<div class="panel-title"><%= t '.title' %></div>	
+			</div>
+			<div class="panel-body">
+				<div class="form-group">
+					<%= f.label :email, class: 'control-label' %>
+					<%= f.text_field :email, class: 'form-control' %>
+					<%= error_tag @user_session, :email %>
+				</div>
+				<div class="form-group">		
+					<%= f.label :password, class: 'control-label' %>
+					<%= f.text_field :password, class: 'form-control' %>
+					<%= error_tag @user_session, :password %>
+				</div>	
 
-<% if @user_session.errors.has_key? :base %>
-	<div id="error_explanation">
-		<%= @user_session.errors[:base].join(',') %>
-	</div>
-<% end %>
+				<p>
+					<%= f.submit :class => "btn btn-success btn-lg btn-block" %>
+				</p>
 
-<%= form_for @user_session do |f| %>
-	
-	<p>
-		<%= f.label :email %>
-		<%= f.text_field :email %>
-		<%= error_tag @user_session, :email %>
-	</p>
-
-	<p>
-		<%= f.label :password %>
-		<%= f.text_field :password %>
-		<%= error_tag @user_session, :password %>
-	</p>	
-
-	<p>
-		<%= f.submit %>
-	</p>
-
-<% end %>	
-
-<p><%= link_to t('.sign_up'), new_user_path %></p>
+				<p><%= link_to t('.sign_up'), new_user_path %></p>
+			</div>
+		</div>	
+	<% end %>
+</div>

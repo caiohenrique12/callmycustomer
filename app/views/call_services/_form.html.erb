@@ -30,7 +30,7 @@
         <%= error_tag @call_service, :details %>
       </div>
       <div class="form-group">
-        <%= f.submit %>
+        <%= f.submit :class => "btn btn-info" %>
         <%= link_to 'Back', call_services_path, class: 'btn btn-default' %>
       </div>
     <% end %>

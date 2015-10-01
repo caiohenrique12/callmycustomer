@@ -270,6 +270,9 @@ pt-BR:
       title: Editar Situação
     index:
       title: Lista de Situações
+    links:
+      edit: Editar 
+      back: Voltar
   users:
     new:
       title: Criar Conta
@@ -292,6 +295,16 @@ pt-BR:
     submit:
       user_session:
         create: 'Entrar'
+      user:
+        create: 'Salvar'
+      call_service: 
+        create: 'Abrir Chamado'
+      situation:
+        create: 'Salvar'
+      service:
+        create: 'Salvar'
+      component:
+        create: 'Salvar'
   activerecord:
     models:
       call_finish: Finalizar chamado

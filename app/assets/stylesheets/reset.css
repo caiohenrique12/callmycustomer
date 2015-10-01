@@ -125,3 +125,7 @@ body {
 .breadcrumb > li a {
 	color: #737881;
 }
+
+.container {
+	max-width: 300px;
+}

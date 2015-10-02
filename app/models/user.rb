@@ -24,7 +24,10 @@ class User < ActiveRecord::Base
 	end
 
 	def self.authenticate(email, password)
-		confirmed.find_by(email: email)
-		try(:authenticate, password)
+		user = confirmed.find_by(email: email)
+		if user.present?
+			user.authenticate(password)
+		end
 	end
+
 end

@@ -14,11 +14,11 @@
     <p class="list-group-item-text"><%= user.email %></p>
   <div class="form-group">
     <!--<%= link_to 'Show', user, class: 'btn btn-warning' %>-->
-    <%= link_to 'Edit', edit_user_path(user), class: 'btn btn-primary' %>
-    <%= link_to 'Destroy', user, class: 'btn btn-danger', method: :delete, data: { confirm: 'Are you sure?' } %>
+    <%= link_to ' Edit ', edit_user_path(user), class: 'btn btn-primary glyphicon glyphicon-edit' %>
+    <%= link_to ' Destroy ', user, class: 'btn btn-danger glyphicon glyphicon-remove', method: :delete, data: { confirm: 'Are you sure?' } %>
   </div>
   </div>
 </div>
 <% end %>
 
-<%= link_to 'New User', new_user_path, class: 'btn btn-info' %>
+<%= link_to ' New User ', new_user_path, class: 'btn btn-info glyphicon glyphicon-ok' %>

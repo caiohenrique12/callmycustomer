@@ -18,7 +18,7 @@
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
 				</button>
-				<%= link_to 'Callmycustomer', root_path, class: 'navbar-brand'%>
+				<%= link_to ' Callmycustomer', root_path, class: 'navbar-brand glyphicon glyphicon-copyright-mark'%>
 			</div>
 
 			<!-- Collect the nav links, forms, and other content for toggling -->
@@ -27,10 +27,10 @@
 					<li class="dropdown">
 						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Minha Conta <span class="caret"></span></a>
 						<ul class="dropdown-menu">
-							<li><%= link_to 'Login', new_user_sessions_path %>
+							<li><%= link_to ' Login', new_user_sessions_path, class: 'glyphicon glyphicon-log-in' %>
 							</li>
 							<li role="separator" class="divider"></li>
-							<li><%= link_to 'Criar Conta', new_user_path %></li>
+							<li><%= link_to ' Criar Conta', new_user_path, class: 'glyphicon glyphicon-plus' %></li>
 						</ul>
 					</li>
 				</ul>
@@ -42,13 +42,13 @@
 			<div class="col-md-2 sidebar">
 				<nav>
 					<ul class="nav nav-sidebar">
-						<li><%= link_to 'Home', root_path %></li>
-						<li><%= link_to 'Usuários', users_path %></li>
-						<li><%= link_to 'Serviços', services_path %></li>
-						<li><%= link_to 'Componentes', components_path %></li>
-						<li><%= link_to 'Situações', situations_path %></li>
-						<li><%= link_to 'Abrir Chamado', new_call_service_path %></li>
-						<li><%= link_to 'Fechar Chamado', new_call_finish_path %></li>
+						<li><%= link_to ' Home', root_path, class: 'glyphicon glyphicon-home' %></li>
+						<li><%= link_to ' Usuários', users_path, class: 'glyphicon glyphicon-user' %></li>
+						<li><%= link_to ' Serviços', services_path, class: 'glyphicon glyphicon-cog' %></li>
+						<li><%= link_to ' Componentes', components_path, class: 'glyphicon glyphicon-wrench' %></li>
+						<li><%= link_to ' Situações', situations_path, class: 'glyphicon glyphicon-list-alt' %></li>
+						<li><%= link_to ' Abrir Chamado', new_call_service_path, class: 'glyphicon glyphicon-phone-alt' %></li>
+						<!--<li><%= link_to ' Fechar Chamado', new_call_finish_path %></li>-->
 					</ul>
 				</nav>
 			</div>

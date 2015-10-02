@@ -7,7 +7,7 @@
 	<%= form_for @user_session do |f| %>
 		<div class="panel panel-default">
 			<div class="panel-heading">
-				<div class="panel-title"><%= t '.title' %></div>	
+				<div class="panel-title"><%= t '.title' %></div>
 			</div>
 			<div class="panel-body">
 				<div class="form-group">
@@ -15,18 +15,18 @@
 					<%= f.text_field :email, class: 'form-control' %>
 					<%= error_tag @user_session, :email %>
 				</div>
-				<div class="form-group">		
+				<div class="form-group">
 					<%= f.label :password, class: 'control-label' %>
-					<%= f.text_field :password, class: 'form-control' %>
+					<%= f.password_field :password, class: 'form-control' %>
 					<%= error_tag @user_session, :password %>
-				</div>	
+				</div>
 
 				<p>
-					<%= f.submit :class => "btn btn-success btn-lg btn-block" %>
+					<%= f.submit :class => "btn btn-success btn-lg btn-block glyphicon glyphicon-log-in" %>
 				</p>
 
 				<p><%= link_to t('.sign_up'), new_user_path %></p>
 			</div>
-		</div>	
+		</div>
 	<% end %>
 </div>

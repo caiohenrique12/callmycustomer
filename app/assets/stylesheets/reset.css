@@ -1,3 +1,13 @@
+@font-face {
+  font-family: 'Glyphicons Halflings';
+  src: url('/assets/fonts/glyphicons-halflings-regular.eot');
+  src: url('/assets/fonts/glyphicons-halflings-regular.eot?#iefix')
+  format('embedded-opentype'), url('/assets/fonts/glyphicons-halflings-regular.woff')
+  format('woff'), url('/assets/fonts/glyphicons-halflings-regular.ttf')
+  format('truetype'), url('/assets/fonts/glyphicons-halflings-regular.svg#glyphicons-halflingsregular')
+  format('svg');
+}
+
 * {
 	margin: 0;
 	padding: 0;
@@ -10,6 +20,10 @@ li {
 
 body {
 	padding-top: 0;
+}
+
+li a {
+  font-size: 16px;
 }
 
 .navbar-default .navbar-brand {
@@ -53,7 +67,7 @@ body {
 	overflow-x: hidden;
 	overflow-y: auto;
 	background-color: #E9EBEC;
-	border-right: 1px solid #EEE;	
+	border-right: 1px solid #EEE;
 }
 
 .sidebar a {

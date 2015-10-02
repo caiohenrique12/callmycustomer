@@ -21,8 +21,8 @@
       <tr>
         <td class="title-body"><%= component.name %></td>
         <td>
-          <%= link_to 'Edit', edit_component_path(component), class: 'btn btn-success' %>
-          <%= link_to 'Destroy', component, class: 'btn btn-danger', method: :delete, data: { confirm: 'Are you sure?' } %>
+          <%= link_to ' Edit', edit_component_path(component), class: 'btn btn-success glyphicon glyphicon-edit' %>
+          <%= link_to ' Destroy', component, class: 'btn btn-danger glyphicon glyphicon-remove', method: :delete, data: { confirm: 'Are you sure?' } %>
         </td>
       </tr>
     <% end %>
@@ -30,4 +30,4 @@
 </table>
 </div>
 
-<%= link_to 'New Component', new_component_path, class: 'btn btn-info' %>
+<%= link_to ' New Component', new_component_path, class: 'btn btn-info glyphicon glyphicon-ok' %>

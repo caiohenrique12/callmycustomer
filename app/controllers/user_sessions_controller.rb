@@ -15,7 +15,6 @@ class UserSessionsController < ApplicationController
 	end
 
 	def destroy
-
 	end
 
 end

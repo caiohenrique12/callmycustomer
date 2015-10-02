@@ -21,8 +21,8 @@
       <tr>
         <td class="title-body"><%= service.name %></td>
         <td>
-          <%= link_to 'Edit', edit_service_path(service), class: 'btn btn-success' %>
-          <%= link_to 'Destroy', service, class: 'btn btn-danger', method: :delete, data: { confirm: 'Are you sure?' } %></td>
+          <%= link_to ' Edit', edit_service_path(service), class: 'btn btn-success glyphicon glyphicon-edit' %>
+          <%= link_to ' Destroy', service, class: 'btn btn-danger glyphicon glyphicon-remove', method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
       <% end %>
     </tbody>
@@ -30,4 +30,4 @@
 </div>
 <br>
 
-<%= link_to 'New Service', new_service_path, class: 'btn btn-info' %>
+<%= link_to ' New Service', new_service_path, class: 'btn btn-info glyphicon glyphicon-ok' %>

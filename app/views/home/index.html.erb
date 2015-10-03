@@ -1,6 +1,12 @@
-<div class="col-md-10">
-	<h4>Seja bem vindo ao <i>CallMyCustomer</i></h4>
-</div>
+<% if user_signed_in? %>
+	<div class="col-md-10">
+		<h4>Seja bem vindo ao seu <i>Dashboard</i></h4>
+	</div>
+<% else %>
+	<div class="col-md-10">
+		<h4>Seja bem vindo ao <i>CallMyCustomer</i></h4>
+	</div>
+<% end %>
 
 <div class="col-md-4">
 	<div class="panel panel-default panel-one">

@@ -1,8 +1,8 @@
 <ul class="dropdown-menu">
   <% if user_signed_in? %>
-      <%= link_to "Sair", destroy_user_session_path, :method => :delete %>
+      <li><%= link_to "Sair", destroy_user_session_path, :method => :delete %></li>
       <li role="separator" class="divider"></li>
-      <li><%= link_to "Minha Conta", edit_user_session_path %></li>
+      <li><%= link_to "Minha Conta", edit_user_registration_path %></li>
   <% else %>
       <li><%= link_to "Entrar", new_user_session_path %></li>
       <li role="separator" class="divider"></li>

@@ -35,16 +35,13 @@
 	<div class="container-fluid">
 		<div class="row">
 			<div class="col-md-2 sidebar">
-				<nav>
 					<ul class="nav nav-sidebar">
-						<li><%= link_to ' Home', root_path, class: 'glyphicon glyphicon-home' %></li>
-						<li><%= link_to ' Serviços', services_path, class: 'glyphicon glyphicon-cog' %></li>
-						<li><%= link_to ' Componentes', components_path, class: 'glyphicon glyphicon-wrench' %></li>
-						<li><%= link_to ' Situações', situations_path, class: 'glyphicon glyphicon-list-alt' %></li>
-						<li><%= link_to ' Abrir Chamado', new_call_service_path, class: 'glyphicon glyphicon-phone-alt' %></li>
-						<!--<li><%= link_to ' Fechar Chamado', new_call_finish_path %></li>-->
+						<% if user_signed_in? %>
+							<%= render 'layouts/navbar_user' %>
+						<% else %>
+							<%= render 'layouts/navbar_visitor' %>
+						<% end %>
 					</ul>
-				</nav>
 			</div>
 			<div class="col-md-10 col-md-offset-2 main">
 				<%= yield %>

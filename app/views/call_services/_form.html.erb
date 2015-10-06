@@ -10,19 +10,24 @@
   <div class="panel-body">
     <%= form_for(@call_service) do |f| %>
       <div class="form-group">
-        <%= f.label :id_service, class: 'control-label' %>
-        <%= f.select :id_service, Service.all.collect{|c| [c.name, c.id]}, prompt: 'Selecione', class: 'form-control' %>
-        <%= error_tag @call_service, :id_service %>
+        <%= f.label :user_id, class: 'control-label' %>
+        <%= f.number_field :user_id, class: 'form-control' %>
+        <%= error_tag @call_service, :user_id %>
       </div>
       <div class="form-group">
-        <%= f.label :id_component, class: 'control-label' %>
-        <%= f.select :id_component, Component.all.collect{|c| [c.name, c.id]}, prompt: 'Selecione', class: 'form-control' %>
-        <%= error_tag @call_service, :id_component %>
+        <%= f.label :service_id, class: 'control-label' %>
+        <%= f.select :service_id, Service.all.collect{|c| [c.name, c.id]}, prompt: 'Selecione', class: 'form-control' %>
+        <%= error_tag @call_service, :service_id %>
       </div>
       <div class="form-group">
-        <%= f.label :id_situation, class: 'control-label' %>
-        <%= f.select :id_situation, Situation.all.collect{|c| [c.name, c.id]}, prompt: 'Selecione', class: 'form-control' %>
-        <%= error_tag @call_service, :id_situation %>
+        <%= f.label :component_id, class: 'control-label' %>
+        <%= f.select :component_id, Component.all.collect{|c| [c.name, c.id]}, prompt: 'Selecione', class: 'form-control' %>
+        <%= error_tag @call_service, :component_id %>
+      </div>
+      <div class="form-group">
+        <%= f.label :situation_id, class: 'control-label' %>
+        <%= f.select :situation_id, Situation.all.collect{|c| [c.name, c.id]}, prompt: 'Selecione', class: 'form-control' %>
+        <%= error_tag @call_service, :situation_id %>
       </div>
       <div class="form-group">
         <%= f.label :details, class: 'control-label' %>

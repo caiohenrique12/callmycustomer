@@ -5,4 +5,9 @@ class HomeController < ApplicationController
 		@users = User.all
 	end
 
+	protected
+
+	def authenticate_user!
+	end
+
 end

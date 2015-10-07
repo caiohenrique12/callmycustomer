@@ -10,8 +10,7 @@
   <div class="panel-body">
     <%= form_for(@call_service) do |f| %>
       <div class="form-group">
-        <%= f.label :user_id, class: 'control-label' %>
-        <%= f.number_field :user_id, class: 'form-control' %>
+        <%= f.hidden_field :user_id, :value => @call_service.user_id %>
         <%= error_tag @call_service, :user_id %>
       </div>
       <div class="form-group">

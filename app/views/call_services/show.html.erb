@@ -1,15 +1,19 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <%= t '.id_customer', id_customer: @call_service.id_customer %>
+  <%= t '.user_id', user_id: @call_service.user.id %>
 </p>
 
 <p>
-  <%= t '.id_service', id_service: @call_service.id_service %>
+  <%= t '.service_id', service_id: @call_service.service_id %>
 </p>
 
 <p>
-  <%= t '.id_component', id_component: @call_service.id_component %>
+  <%= t '.component_id', component_id: @call_service.component_id %>
+</p>
+
+<p>
+  <%= t '.situation_id', situation_id: @call_service.situation_id %>
 </p>
 
 <p>

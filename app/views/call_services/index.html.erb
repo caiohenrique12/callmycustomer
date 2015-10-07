@@ -11,10 +11,11 @@
   <table class="table table-bordered">
     <thead>
       <tr>
-        <th>Id customer</th>
-        <th>Id service</th>
-        <th>Id component</th>
-        <th>Details</th>
+        <th>Usuário</th>
+        <th>Serviço</th>
+        <th>Componente</th>
+        <th>Situação</th>
+        <th>Detalhes</th>
         <th>Ação</th>
       </tr>
     </thead>
@@ -22,9 +23,10 @@
     <tbody>
       <% @call_services.each do |call_service| %>
       <tr>
-        <td><%= call_service.id_customer %></td>
-        <td><%= call_service.id_service %></td>
-        <td><%= call_service.id_component %></td>
+        <td><%= call_service.user.id %></td>
+        <td><%= call_service.service_id %></td>
+        <td><%= call_service.component_id %></td>
+        <td><%= call_service.situation_id %></td>
         <td><%= call_service.details %></td>
         <td>
             <%= link_to 'Show', call_service %>

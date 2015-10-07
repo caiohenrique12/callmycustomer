@@ -24,9 +24,9 @@
       <% @call_services.each do |call_service| %>
       <tr>
         <td><%= call_service.user.id %></td>
-        <td><%= call_service.service_id %></td>
-        <td><%= call_service.component_id %></td>
-        <td><%= call_service.situation_id %></td>
+        <td><%= call_service.service.name %></td>
+        <td><%= call_service.component.name %></td>
+        <td><%= call_service.situation.name %></td>
         <td><%= call_service.details %></td>
         <td>
             <%= link_to 'Show', call_service %>

@@ -3,6 +3,6 @@ class CallService < ActiveRecord::Base
 
   	validates_presence_of :details
 
-  	validates_length_of :details, allow_blank: false
+  	validates_length_of :user_id, :service_id, :component_id, :situation_id, :details, allow_blank: false
 
 end
